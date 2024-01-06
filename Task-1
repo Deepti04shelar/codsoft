@@ -1,0 +1,54 @@
+import java.util.Scanner;
+import java.util.Random;
+
+
+class NumberGame
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        Random r = new Random();
+        int min = 1;
+        int max = 50;
+        int attempt = 3;
+        System.out.println("..............Welcome to Number GussingGame.....................");
+        System.out.println("Enter any number between "  +min +" and "+max);
+        System.out.println("You have attempts: "+attempt);
+        int generatingNumber = r.nextInt(max-min+1)+min;
+        
+         for(attempt = 1;attempt<=3;attempt++)
+        {
+            
+             System.out.println("Enter Guessing Number:");
+             int guess = sc.nextInt();
+
+            if (guess==generatingNumber)
+            {
+                System.out.println("Congratulations... You WIN..");
+            
+            }
+            else if(guess>generatingNumber)
+            {
+                System.out.println("Your guess number is to high");
+                
+            }
+            else 
+            {
+                System.out.println("Your guess number is to low");
+                 
+            }
+         }
+            if(attempt == attempt)
+            {
+                System.out.println("Your attempts are over");
+            }
+        
+    
+
+        System.out.println("The generatedNumber is : "+generatingNumber);
+        System.out.println(".......BETTER LUCK NEXT TIME.......");
+        }
+
+}
+    
+
